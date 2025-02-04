@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {UserComponent} from './user.component';
+import { ChildComponent } from './child.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,11 @@ import {Component} from '@angular/core';
     </section>
     <section>
       <button (click)="greet()">Greet</button>
+    </section>
+    <app-user occupation="Angular Developer" name="Joshua"></app-user>
+    <app-child (addItemEvent)="addItem($event)" />
   `,
+  imports: [UserComponent, ChildComponent],
 })
 export class AppComponent {
   message = '';
@@ -18,7 +24,11 @@ export class AppComponent {
     this.message = '🎉 You are awesome'
   }
 
-  greet() {
-    console.log('Hello, there 👋');
+greet() {
+  console.log('Hello, there 👋');
+}
+
+addItem(item: any) {
+  console.log('Item added:', item);
 }
 }
