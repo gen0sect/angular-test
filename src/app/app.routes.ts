@@ -4,6 +4,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login.component';
 import { CarsComponent } from './car-service/car.component';
 import { DateComponent } from './date/date.component';
+import { PipeComponent } from './custom-pipes/pipe.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,10 @@ export const routes: Routes = [
         path:'date',
         title: 'App Date Page',
         component: DateComponent
+    },
+    {
+        path:'custom-pipe',
+        title: 'App Custom Pipe Page',
+        component: PipeComponent
     }
 ];

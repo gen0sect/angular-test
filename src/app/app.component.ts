@@ -14,6 +14,8 @@ import {RouterOutlet, RouterLink} from '@angular/router';
       <a style="text-decoration:none" routerLink="/cars">Cars</a>
       |
       <a style="text-decoration:none" routerLink="/date">Date</a>
+      |
+      <a style="text-decoration:none" routerLink="/custom-pipe">Custom Pipe</a>
     </nav>
     <router-outlet/>
   `,
