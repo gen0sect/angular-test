@@ -1,19 +1,24 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 
-  'app-root',
-  template:`
-  @for (fruit of fruits; track fruit.id) {
-    {{fruit.name}},
-    <img alt="photo" [src]="imageURL">
-    <div [contentEditable]="isEditable">{{fruit.name}}</div>
-  }
-  `
-  })
-
+  selector: 'app-root',
+  template: `
+    <section (mouseover)="onMouseOver()">
+      There's a secret message for you, hover to reveal 👀
+      {{ message }}
+    </section>
+    <section>
+      <button (click)="greet()">Greet</button>
+  `,
+})
 export class AppComponent {
-  fruits = [{id: 1, name: 'Apple'}, {id: 2, name: 'Banana'}, {id: 3, name: 'Cherry'}];
-  imageURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5rGAYo0IfaL0D8tLXb23tuAMOWC2viTpefQ&s';
-  isEditable = true;
+  message = '';
+
+  onMouseOver() {
+    this.message = '🎉 You are awesome'
+  }
+
+  greet() {
+    console.log('Hello, there 👋');
+}
 }
