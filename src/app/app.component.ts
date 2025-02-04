@@ -5,11 +5,11 @@ import {RouterOutlet, RouterLink} from '@angular/router';
   selector: 'app-root',
   template: `
     <nav>
-      <a routerLink="/">Home</a>
+      <a style="text-decoration:none" routerLink="/">Home</a>
       |
-      <a routerLink="/user">User</a>
+      <a style="text-decoration:none" routerLink="/user">User</a>
       |
-      <a routerLink="/loginform"> Login Form</a>
+      <a style="text-decoration:none" routerLink="/loginform"> Login Form</a>
     </nav>
     <router-outlet/>
   `,
