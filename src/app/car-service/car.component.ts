@@ -1,10 +1,14 @@
-import { Component, inject } from "@angular/core";
-import { Carservice } from "./car.service";
+import {Component, inject} from '@angular/core';
+import {CarService} from './car.service';
 
 @Component({
-    selector: 'car-root',
-    template: `<p>{{Carservice.getCars()}}</p>`,
+  selector: 'app-root',
+  template: `<p>Car Listing: {{display}}</p>`,
 })
-export class CarsComponent{
-    Carservice = inject(Carservice)
+export class CarsComponent {
+  display = '';
+
+  constructor(private carService: CarService) {
+    this.display = this.carService.getCars().join(' ⭐️ ');
+  }
 }

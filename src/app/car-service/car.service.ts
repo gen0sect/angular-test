@@ -1,18 +1,16 @@
-import { Injectable } from "@angular/core";
+import {Injectable} from '@angular/core';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
+export class CarService {
+  cars = ['Sunflower GT', 'Flexus Sport', 'Sprout Mach One'];
 
-export class Carservice{
-    cars = ['Ford', ' Chevy', ' Buick'];
-    
-    getCars(): string[]{
-        return this.cars;
-    }
+  getCars(): string[] {
+    return this.cars;
+  }
 
-    getCar(id: number) {
-        return this.cars[id];
-    };
+  getCar(id: number) {
+    return this.cars[id];
+  }
 }
-
