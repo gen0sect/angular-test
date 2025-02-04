@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login.component';
 import { CarsComponent } from './car-service/car.component';
+import { DateComponent } from './date/date.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,10 @@ export const routes: Routes = [
         path:'cars',
         title: 'App Cars Page',
         component: CarsComponent
+    },
+    {
+        path:'date',
+        title: 'App Date Page',
+        component: DateComponent
     }
 ];

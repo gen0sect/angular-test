@@ -12,6 +12,8 @@ import {RouterOutlet, RouterLink} from '@angular/router';
       <a style="text-decoration:none" routerLink="/loginform"> Login Form</a>
       |
       <a style="text-decoration:none" routerLink="/cars">Cars</a>
+      |
+      <a style="text-decoration:none" routerLink="/date">Date</a>
     </nav>
     <router-outlet/>
   `,
