@@ -1,24 +1,16 @@
 import {Component} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { UpperCasePipe } from '@angular/common';
+import { LowerCasePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-root',
   template: `
-    <p>Username: {{ username }}</p>
-    <p>Framework: {{ favoriteFramework }}</p>
-    <label for="framework">
-      Favorite Framework:
-      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
-    </label>
-    <button (click)="showFramework()">Show Framework</button>
+    {{ username | uppercase}}
+    <br>
+    {{ username | lowercase}}
   `,
-  imports: [FormsModule],
+  imports: [UpperCasePipe, LowerCasePipe],
 })
 export class UserComponent {
-  favoriteFramework = '';
-  username = 'youngTech';
-
-  showFramework() {
-    alert("his favorite framework is: " + this.favoriteFramework);
-  }
+  username = 'yOunGTECh';
 }
