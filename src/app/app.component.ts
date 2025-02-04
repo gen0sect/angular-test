@@ -8,6 +8,8 @@ import {RouterOutlet, RouterLink} from '@angular/router';
       <a routerLink="/">Home</a>
       |
       <a routerLink="/user">User</a>
+      |
+      <a routerLink="/loginform"> Login Form</a>
     </nav>
     <router-outlet/>
   `,
