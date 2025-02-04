@@ -10,6 +10,8 @@ import {RouterOutlet, RouterLink} from '@angular/router';
       <a style="text-decoration:none" routerLink="/user">User</a>
       |
       <a style="text-decoration:none" routerLink="/loginform"> Login Form</a>
+      |
+      <a style="text-decoration:none" routerLink="/cars">Cars</a>
     </nav>
     <router-outlet/>
   `,
